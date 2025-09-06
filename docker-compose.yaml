@@ -1,0 +1,11 @@
+services:
+  dev:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: zod-user-schemas:latest
+    container_name: zod-user-schemas-container
+    volumes:
+      - .:/app
+      - /app/node_modules
+    command: ["tail", "-f", "/dev/null"]
