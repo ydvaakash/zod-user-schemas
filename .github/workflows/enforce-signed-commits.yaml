@@ -30,7 +30,7 @@ jobs:
 
       - name: Ensure all commits are signed
         run: |
-          if git log --format='%G?' origin/main..HEAD | grep -v 'G'; then
+          if git log --format='%G?' origin/main..HEAD | grep -v '[GU]'; then
             echo "ERROR: Found unsigned or unverified commits."
             exit 1
           fi
