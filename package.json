@@ -1,0 +1,59 @@
+{
+	"name": "@ydvaakash/zod-user-schemas",
+	"private": false,
+	"version": "1.0.0",
+	"description": "Zod schemas for user details, including firstName, lastName, userEmail, and userPassword.",
+	"type": "module",
+	"files": [
+		"dist",
+		"README.md",
+		"LICENSE"
+	],
+	"scripts": {
+		"build": "tsc",
+		"dev": "tsc --watch",
+		"prettier:check": "prettier . --check",
+		"prettier:write": "prettier . --write",
+		"eslint:check": "eslint . --max-warnings=0",
+		"eslint:fix": "eslint . --fix",
+		"prepare": "husky && husky install",
+		"check-for-commit": "prettier . --write && eslint . --max-warnings=0"
+	},
+	"author": {
+		"name": "Aakash Yadav",
+		"github": "https://github.com/ydvaakash"
+	},
+	"repository": {
+		"type": "git",
+		"url": ""
+	},
+	"keywords": [
+		"zod schemas",
+		"zod user schemas",
+		"user auth schemas",
+		"user validation schemas",
+		"zod user auth schemas",
+		"zod user validation schemas"
+	],
+	"license": "Apache-2.0",
+	"dependencies": {
+		"zod": "^4.1.5"
+	},
+	"devDependencies": {
+		"@eslint/js": "^9.34.0",
+		"eslint": "^9.34.0",
+		"eslint-config-prettier": "^10.1.8",
+		"husky": "^9.1.7",
+		"lint-staged": "^16.1.6",
+		"prettier": "3.6.2",
+		"typescript": "^5.9.2",
+		"typescript-eslint": "^8.42.0"
+	},
+	"lint-staged": {
+		"*.{js,jsx,ts,tsx}": [
+			"prettier --write",
+			"eslint --cache --fix --max-warnings=0"
+		],
+		"*.{css,md,json}": "prettier --write"
+	}
+}
