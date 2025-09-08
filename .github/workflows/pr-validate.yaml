@@ -1,0 +1,16 @@
+name: PR Validation
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  enforce-development-pr:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check PR source branch
+        if: github.event.pull_request.head.ref != 'development'
+        run: |
+          echo "Error: Only PRs from 'development' branch are allowed to merge into 'main'."
+          exit 1
