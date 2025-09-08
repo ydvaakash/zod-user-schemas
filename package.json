@@ -17,8 +17,9 @@
 		"prettier:write": "prettier . --write",
 		"eslint:check": "eslint . --max-warnings=0",
 		"eslint:fix": "eslint . --fix",
-		"prepare": "husky && husky install",
-		"check-for-commit": "prettier . --write && eslint . --max-warnings=0"
+		"prepare": "husky",
+		"check-for-commit": "prettier . --write && eslint . --max-warnings=0",
+		"auto-check-precommit": "lint-staged"
 	},
 	"author": {
 		"name": "Aakash Yadav",
