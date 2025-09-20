@@ -1,7 +1,7 @@
 {
 	"name": "@ydvaakash/zod-user-schemas",
 	"private": false,
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "Zod schemas for user details, including firstName, lastName, userEmail, and userPassword.",
 	"readme": "README-NPM.md",
 	"type": "module",

@@ -56,3 +56,55 @@ Zod schemas for validation of user details, including firstName, lastName, userE
 - userEmailTypeFromZodSchema
 - userPasswordTypeFromZodSchema
   <br>
+
+## Local Development Environment Setup Guide
+
+### Pre-requisites
+
+1. **Git** installed and configured
+2. **Docker Desktop**
+
+### Steps
+
+1. Navigate to the directory where you want to clone the repository.
+
+   ```bash
+   cd <your-preferred-local-directory>
+   ```
+
+   <br>
+
+2. Clone the repository.
+
+   ```bash
+   git clone <repo-ssh-url>
+   ```
+
+   <br>
+
+3. Ensure Docker is running on your machine.
+   <br>
+
+4. Build and start the development container.
+
+   ```bash
+   docker compose up -d --build
+   ```
+
+   <br>
+
+5. Open an interactive session inside the container.
+
+   ```bash
+   docker exec -it zod-user-schemas-container /bin/bash
+   ```
+
+   <br>
+
+6. Build (transpile) the TypeScript files.
+   ```bash
+   npm run build
+   ```
+   <br>
+
+**Note:** Check the <code>scripts</code> section in <code>package.json</code> for additional available npm commands.
